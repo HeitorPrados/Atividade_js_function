@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function calcularMedia(nota1, nota2, nota3, tipoMedia) {
+            let media;
+
+            if (tipoMedia === 'A') {
+                media = (nota1 + nota2 + nota3) / 3;
+            } else if (tipoMedia === 'P') {
+                media = (nota1 * 5 + nota2 * 3 + nota3 * 2) / (5 + 3 + 2);
+            } else {
+                
+                return 'Tipo de média inválido.';
+            }
+
+            
+            return media.toFixed(2); 
+            }
+
+            
+        const nota1 = 8;
+        const nota2 = 9;
+        const nota3 = 7;
+        const tipoMedia = 'P'; 
+
+        const resultado = calcularMedia(nota1, nota2, nota3, tipoMedia);
+        alert('A média calculada é: ' + resultado);
+    </script>
+</body>
+</html>

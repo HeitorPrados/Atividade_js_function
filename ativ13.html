@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let frase = 'orangotango careca doido';
+
+        function misturar(texto) {
+            let caracteres = texto.split('');
+
+            for (let i = caracteres.length; i; i--) {
+                const indiceAleatorio = Math.floor(Math.random() * i);
+                const elemento = caracteres[i - 1];
+                caracteres[i - 1] = caracteres[indiceAleatorio];
+                caracteres[indiceAleatorio] = elemento;
+            }
+
+            alert(`${texto} = ${caracteres.join('')}`)
+        }
+
+        misturar(frase);
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function formarNumero(n1, n2) {
+            const primeiroDigitoN1 = Math.floor(n1 / 10); 
+            const segundoDigitoN2 = n2 % 10; 
+            
+            const n3 = parseInt(`${primeiroDigitoN1}${segundoDigitoN2}`); 
+            return n3;
+        }
+
+        const n1 = 23;
+        const n2 = 89;
+
+        const n3 = formarNumero(n1, n2);
+        alert(`O número formado é: ${n3}`);
+    </script>
+</body>
+</html>
